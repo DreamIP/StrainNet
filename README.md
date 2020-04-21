@@ -43,12 +43,12 @@ The pretrained models of StrainNet-h and -f are available [here](https://drive.g
 
 ## Results of star images
 
-|Reference |<img src="https://github.com/seyfeddineboukhtache/StrainNet/blob/master/Challenge_frames/Displacements/Reference.png" width="700" height="150">  |
+|Reference |<img src="https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Star_frames/Displacements/Reference.png" width="700" height="150">  |
 | ---------|-------------------------------------------------------------------------------------------------------------------------|
-|DIC 21x21 |<img src="https://github.com/seyfeddineboukhtache/StrainNet/blob/master/Challenge_frames/Displacements/DIC21x21.png" width="700" height="150">|
-|DIC 11x11 |<img src="https://github.com/seyfeddineboukhtache/StrainNet/blob/master/Challenge_frames/Displacements/DIC11x11.png" width="700" height="150">|
-|StrainNet-h |<img src="https://github.com/seyfeddineboukhtache/StrainNet/blob/master/Challenge_frames/Displacements/StrainNet-h.png" width="700" height="150">|
-|StrainNet-f |<img src="https://github.com/seyfeddineboukhtache/StrainNet/blob/master/Challenge_frames/Displacements/StrainNet-f.png" width="700" height="150">|
+|DIC 21x21 |<img src="https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Star_frames/Displacements/DIC21x21.png" width="700" height="150">|
+|DIC 11x11 |<img src="https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Star_frames/Displacements/DIC11x11.png" width="700" height="150">|
+|StrainNet-h |<img src="https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Star_frames/Displacements/StrainNet-h.png" width="700" height="150">|
+|StrainNet-f |<img src="https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Star_frames/Displacements/StrainNet-f.png" width="700" height="150">|
 
 
 ## References 
