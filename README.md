@@ -39,7 +39,7 @@ Install the following modules:
 
 ## Pretrained Models
 
-The pretrained models of StrainNet-h and -f are available [here](https://drive.google.com/drive/folders/1eh2h6ysikk87L_uad8NNt4FpEq7BSN9M?usp=sharing)
+The pretrained models of StrainNet-h and StrainNet_f are available [here](https://drive.google.com/drive/folders/1eh2h6ysikk87L_uad8NNt4FpEq7BSN9M?usp=sharing) 
 
 ## Results of star images
 
