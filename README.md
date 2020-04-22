@@ -2,7 +2,7 @@
 
 StrainNet [1] estimates subpixelic displacement and strain fields from pairs of reference and deformed images of a flat speckled surface, as Digital Image Correlation (DIC) does. It is based on FlowNetS [2]. See paper [1] for details. 
 
-Please cite the papers [1] and [2], also, make sure to adhere to the licensing terms of the authors. 
+Please cite the papers [1] and [2]. Also, make sure to adhere to the licensing terms of the authors. 
 
 
 ## Prerequisite
