@@ -24,7 +24,7 @@ Install the following modules:
 
 2. Specify the dataset path in Train.py
 
-3. Execute the follwing command 
+3. Execute the following command 
 
        python Train.py --arch StrainNet_h
    
