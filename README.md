@@ -52,12 +52,7 @@ The pretrained models of StrainNet-h and -f are available [here](https://drive.g
 ## References 
 [1]
 
-[2]
-@InProceedings{DFIB15,
-  author       = "A. Dosovitskiy and P. Fischer and E. Ilg and P. H{\"a}usser and C. Haz{\i}rba{\c{s}} and V. Golkov and P. v.d. Smagt and D. Cremers and T. Brox",
-  title        = "FlowNet: Learning Optical Flow with Convolutional Networks",
-  booktitle    = "IEEE International Conference on Computer Vision (ICCV)",
-  year         = "2015"
-}
+
+[2] A. Dosovitskiy et al., "FlowNet: Learning Optical Flow with Convolutional Networks," 2015 IEEE International Conference on Computer Vision (ICCV), Santiago, 2015, pp. 2758-2766.
 
 
