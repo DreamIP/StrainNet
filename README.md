@@ -16,6 +16,8 @@ Install the following modules:
 	path.py
 	numpy
 	pandas
+	tqdm
+	
        
 ## Training
 
