@@ -1,6 +1,6 @@
 # StrainNet (Pytorch implementation)
 
-StrainNet [1] estimates subpixelic displacement and strain fields from pairs of reference and deformed images of a flat speckled surface, as Digital Image Correlation (DIC) does. See paper [1] for details. 
+StrainNet estimates subpixelic displacement and strain fields from pairs of reference and deformed images of a flat speckled surface, as Digital Image Correlation (DIC) does. See paper [1] for details. 
 
 If you find this implementation useful, please cite the papers [1]. Also, make sure to adhere to the licensing terms of the authors. 
 
