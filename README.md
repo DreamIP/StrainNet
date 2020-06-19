@@ -44,10 +44,10 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 ## Results of star images
 
-|Reference |<img src="http://gitlab.ip.uca.fr/Seyfeddine/StrainNet/-/raw/master/Star_frames/Displacements/Reference.png" width="700" height="150">  |
-| ---------|-------------------------------------------------------------------------------------------------------------------------|
-|StrainNet-h |<img src="http://gitlab.ip.uca.fr/Seyfeddine/StrainNet/-/raw/master/Star_frames/Displacements/StrainNet-h.png" width="700" height="150">|
-|StrainNet-f |<img src="http://gitlab.ip.uca.fr/Seyfeddine/StrainNet/-/raw/master/Star_frames/Displacements/StrainNet-f.png" width="700" height="150">|
+|Reference   | ![](Star_frames/Displacements/Displacements/Reference.png)  |
+|------------|-------------------------------------------------------------|
+|StrainNet-h | ![](Star_frames/Displacements/Displacements/StrainNet-h.png)|
+|StrainNet-f | ![](Star_frames/Displacements/Displacements/StrainNet-f.png)|
 
 
 ## References 
