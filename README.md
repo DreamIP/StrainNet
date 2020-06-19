@@ -7,47 +7,47 @@ If you find this implementation useful, please cite the papers [1]. Also, make s
 ## Prerequisite
 
 Install the following modules: 
-	
-	pytorch >= 1.2
-	torchvision
-	tensorboardX 
-	imageio
-	argparse
-	path.py
-	numpy
-	pandas
-	tqdm
-	
+
+```
+pytorch >= 1.2
+torchvision
+tensorboardX 
+imageio
+argparse
+path.py
+numpy
+pandas
+tqdm
+```
        
 ## Training
 
-1. Generate Speckle dataset [1.0](https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Dataset/Speckle%20dataset) or [2.0](https://github.com/seyfeddineboukhtache/StrainNet/tree/master/Dataset/Speckle%20dataset%202.0)
+1. Generate Speckle dataset [1.0](Dataset/Speckle%20dataset%201.0) or [2.0](Dataset/Speckle%20dataset%202.0)
 
 2. Specify the dataset path in Train.py
 
-3. Execute the following command 
-
-       python Train.py --arch StrainNet_h
-   
-       python Train.py --arch StrainNet_f
-
+3. Execute the following commands
+```
+python Train.py --arch StrainNet_h 
+python Train.py --arch StrainNet_f
+```
 
 ## Running inference
 
-       python inference.py /path/to/input/images/  --arch StrainNet_h  --pretrained /path/to/pretrained/model
-
-       python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model  
+```bash
+python inference.py /path/to/input/images/  --arch StrainNet_h  --pretrained /path/to/pretrained/model
+python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model  
+```
 
 ## Pretrained Models
 
 The pretrained models of StrainNet-h and StrainNet_f are available [here](https://drive.google.com/drive/folders/1eh2h6ysikk87L_uad8NNt4FpEq7BSN9M?usp=sharing) 
 
 ## Results of star images
-
-|Reference   | ![](Star_frames/Displacements/Displacements/Reference.png)  |
-|------------|-------------------------------------------------------------|
-|StrainNet-h | ![](Star_frames/Displacements/Displacements/StrainNet-h.png)|
-|StrainNet-f | ![](Star_frames/Displacements/Displacements/StrainNet-f.png)|
+|Reference   | ![](Star_frames/Displacements/Reference.png)  |
+|:----------:|:---------------------------------------------:|
+|StrainNet-h | ![](Star_frames/Displacements/StrainNet-h.png)|
+|StrainNet-f | ![](Star_frames/Displacements/StrainNet-f.png)|
 
 
 ## References 
@@ -55,5 +55,4 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 ## Acknowledgments
 
-This code is based on the Pytorch impelmentation of FlowNetS from [https://github.com/ClementPinard/FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch)
-
+This code is based on the Pytorch impelmentation of FlowNetS from [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch)
