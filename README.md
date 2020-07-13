@@ -19,18 +19,17 @@ numpy
 pandas
 tqdm
 ```
-       
+
+<!---
 ## Training
-
 1. Generate Speckle dataset [1.0](Dataset/Speckle%20dataset%201.0) or [2.0](Dataset/Speckle%20dataset%202.0)
-
 2. Specify the dataset path in Train.py
-
 3. Execute the following commands
 ```
 python Train.py --arch StrainNet_h 
 python Train.py --arch StrainNet_f
 ```
+-->
 
 ## Running inference
 
@@ -51,7 +50,8 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 
 ## References 
-[1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac, F. Sur. When Deep Learning Meets Digital Image Correlation. 2020. Submitted. 
+## References 
+[1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, Accepeted for publication in *Optics and Lasers in Engineering*, Elsevier 2020.  
 
 ## Acknowledgments
 
