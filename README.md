@@ -33,6 +33,11 @@ python Train.py --arch StrainNet_f
 
 ## Running inference
 
+The images pairs should be in the same location, with the name pattern
+*1.{ext}
+*2.{ext}
+
+
 ```bash
 python inference.py /path/to/input/images/  --arch StrainNet_h  --pretrained /path/to/pretrained/model
 python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model  
