@@ -33,9 +33,7 @@ python Train.py --arch StrainNet_f
 
 ## Running inference
 
-The images pairs should be in the same location, with the name pattern
-*1.{ext}
-*2.{ext}
+The images pairs should be in the same location, with the name pattern: *1.ext  *2.ext
 
 
 ```bash
@@ -49,7 +47,7 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 ## Results of star images
 
-You can use Script_flow.m to Visualize the obtained displacements 
+You can use Script_flow.m to visualize the obtained displacements 
 
 |Reference   | ![](Star_frames/Displacements/Reference.png)  |
 |:----------:|:---------------------------------------------:|
