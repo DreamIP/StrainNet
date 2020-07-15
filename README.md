@@ -50,7 +50,6 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 
 ## References 
-## References 
 [1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, Accepeted for publication in *Optics and Lasers in Engineering*, Elsevier 2020.  
 
 ## Acknowledgments
