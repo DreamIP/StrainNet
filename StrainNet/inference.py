@@ -25,7 +25,7 @@ parser.add_argument('--output', '-o', metavar='DIR', default=None,
                     help='path to output folder. If not set, will be created in data folder')
 parser.add_argument('--div-flow', default=2, type=float,
                     help='value by which flow will be divided')
-parser.add_argument("--img-exts", metavar='EXT', default=['png', 'jpg', 'bmp', 'ppm'], nargs='*', type=str,
+parser.add_argument("--img-exts", metavar='EXT', default=['tif','png', 'jpg', 'bmp', 'ppm'], nargs='*', type=str,
                     help="images extensions to glob")
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
@@ -72,22 +72,36 @@ def main():
         img2 =  np.array(imread(img2_file))
         img1 = img1/255
         img2 = img2/255
+        		
+        if img1.ndim == 2:         
+            img1 = img1[np.newaxis, ...]       
+            img2 = img2[np.newaxis, ...]
         
-        img1 = np.transpose(img1, (2, 0, 1))
-        img2 = np.transpose(img2, (2, 0, 1))
-        # handle numpy array
-        img1 = torch.from_numpy(img1).float()
-        img2 = torch.from_numpy(img2).float()       
-  
-        input_var = torch.cat([img1, img2]).unsqueeze(0)
+            img1 = img1[np.newaxis, ...]       
+            img2 = img2[np.newaxis, ...]
+            
+            img1 = torch.from_numpy(img1).float()
+            img2 = torch.from_numpy(img2).float()       
+        
+            in_ref = torch.cat([img1,img1,img1],1)
+            in_def = torch.cat([img2,img2,img2],1)
+            input_var = torch.cat([in_ref,in_def],1)           
+
+        elif img1.ndim == 3:
+            img1 = np.transpose(img1, (2, 0, 1))
+            img2 = np.transpose(img2, (2, 0, 1))        
+        
+            img1 = torch.from_numpy(img1).float()
+            img2 = torch.from_numpy(img2).float()       
+            input_var = torch.cat([img1, img2]).unsqueeze(0)          
         
         # compute output
-        start = time.time()
         input_var = input_var.to(device)
         output = model(input_var)
         if args.arch == 'StrainNet_h':
             output = output = torch.nn.functional.interpolate(input=output, scale_factor=2, mode='bilinear')
  
+        
         output_to_write = output.data.cpu()
         output_to_write = output_to_write.numpy()       
         disp_x = output_to_write[0,0,:,:]
@@ -102,3 +116,4 @@ def main():
         
 if __name__ == '__main__':
     main()
+
