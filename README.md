@@ -51,6 +51,7 @@ python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_h  --pret
 python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretrained StrainNet-f.pth.tar
 ```
 The output of inference.py can be found in Star_frames/Noiseless_frames/flow/
+
 You can use Script_flow.m to visualize the obtained displacements 
 
 |Reference image   | ![](Star_frames/Displacements/Star.png)   |
