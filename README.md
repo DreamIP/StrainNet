@@ -20,16 +20,14 @@ pandas
 tqdm
 ```
 
-<!---
 ## Training
 1. Generate Speckle dataset [1.0](Dataset/Speckle%20dataset%201.0) or [2.0](Dataset/Speckle%20dataset%202.0)
-2. Specify the Train and Test dataset paths in Train.py (in train_set and test_set)
+2. Specify the Train and Test dataset paths in Train.py (exactly in the definition of train_set and test_set)
 3. Execute the following commands
 ```
 python Train.py --arch StrainNet_h 
 python Train.py --arch StrainNet_f
 ```
--->
 
 ## Running inference
 
