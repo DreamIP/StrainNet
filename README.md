@@ -54,11 +54,11 @@ python inference.py /Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretra
 ```
 You can use Script_flow.m to visualize the obtained displacements 
 
-|Reference   | ![](Star_frames/Noiseless_frames/Star1.tif)   |
+|Reference image   | ![](Star_frames/Noiseless_frames/Star1.tif)   |
 |:----------:|:---------------------------------------------:|
-|Reference   | ![](Star_frames/Displacements/Reference.png)  |
-|StrainNet-h | ![](Star_frames/Displacements/StrainNet-h.png)|
-|StrainNet-f | ![](Star_frames/Displacements/StrainNet-f.png)|
+|Reference displacement   | ![](Star_frames/Displacements/Reference.png)  |
+|StrainNet-h displacement | ![](Star_frames/Displacements/StrainNet-h.png)|
+|StrainNet-f displacement | ![](Star_frames/Displacements/StrainNet-f.png)|
 
 
 ## References 
