@@ -2,7 +2,7 @@ clc
 clear all
 close all
  
-addpath('add the path to reference frames'));
+addpath('add the path to reference frames');
 
 %Train dataset 
 n=100;  
