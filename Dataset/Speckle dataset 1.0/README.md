@@ -9,4 +9,4 @@ In order to generate Speckle Dataset 1.0, respect the following steps:
                   
 * Execute the file Dataset_generator.m using Matlab to generate the two folders containing the Train and Test dataset
 
-* The two files Test_annotations.csv and Train_annotations.csv contain the data annotations of Test and Train dataset, respectively 
+The two files Test_annotations.csv and Train_annotations.csv contain the data annotations of Test and Train dataset, respectively 
