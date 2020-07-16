@@ -84,7 +84,7 @@ SubsetSize = 256;
 %Test dataset 
  n=1; 
 
-  for img = 1:363
+  parfor img = 1:363
 
     name_image = sprintf('Ref%01d.tif',img);
     Image_Ref = double(imread(name_image));
