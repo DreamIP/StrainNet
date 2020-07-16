@@ -44,12 +44,13 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 ## Results of star images
 
-Execute the following commands
+Execute the following commands in the StrainNet directory (please also copy here the tar files if you use the pretrained models)
 
 ```bash
-python inference.py /Star_frames/Noiseless_frames/  --arch StrainNet_h  --pretrained StrainNet-h.pth.tar
-python inference.py /Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretrained StrainNet-f.pth.tar
+python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_h  --pretrained StrainNet-h.pth.tar
+python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretrained StrainNet-f.pth.tar
 ```
+The output of inference.py can be found in Star_frames/Noiseless_frames/flow/
 You can use Script_flow.m to visualize the obtained displacements 
 
 |Reference image   | ![](Star_frames/Displacements/Star.png)   |
