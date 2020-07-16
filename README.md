@@ -57,8 +57,8 @@ You can use Script_flow.m to visualize the obtained displacements
 |Reference image   | ![](Star_frames/Displacements/Star.png)   |
 |:----------:|:---------------------------------------------:|
 |Reference displacement   | ![](Star_frames/Displacements/Reference.png)  |
-|StrainNet-h displacement | ![](Star_frames/Displacements/StrainNet-h.png)|
-|StrainNet-f displacement | ![](Star_frames/Displacements/StrainNet-f.png)|
+|Retrieved by StrainNet-h  | ![](Star_frames/Displacements/StrainNet-h.png)|
+|Retrieved by StrainNet-f | ![](Star_frames/Displacements/StrainNet-f.png)|
 
 
 ## References 
