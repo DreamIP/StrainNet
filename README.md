@@ -48,6 +48,11 @@ The pretrained models of StrainNet-h and StrainNet_f are available [here](https:
 
 You can use Script_flow.m to visualize the obtained displacements 
 
+```bash
+python inference.py /Star_frames/Noiseless_frames/  --arch StrainNet_h  --pretrained StrainNet-h.pth.tar
+python inference.py /Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretrained StrainNet-f.pth.tar
+```
+|Reference   | ![](Star_frames/Noiseless_frames/Star1.tif)  |
 |Reference   | ![](Star_frames/Displacements/Reference.png)  |
 |:----------:|:---------------------------------------------:|
 |StrainNet-h | ![](Star_frames/Displacements/StrainNet-h.png)|
