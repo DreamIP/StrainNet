@@ -65,10 +65,10 @@ SubsetSize = 256;
         Image_BD = interp2(xxp,yyp,Image_Ref_interpol,x,y,'cubic');
 
         % Data labels
-        name_ref = sprintf('Train_Data/Ref%03d_%03d.csv',img,l);   % '/Test_data/...'
-        name_def = sprintf('Train_Data/Def%03d_%03d.csv',img,l);   % '/Test_data/...'
-        name_dispx = sprintf('Train_Data/Dispx%03d_%03d.csv',img,l); % '/Test_data/...'
-        name_dispy = sprintf('Train_Data/Dispy%03d_%03d.csv',img,l); % '/Test_data/...'
+        name_ref = sprintf('Train_Data/Ref%03d_%03d.csv',img,l); 
+        name_def = sprintf('Train_Data/Def%03d_%03d.csv',img,l);   
+        name_dispx = sprintf('Train_Data/Dispx%03d_%03d.csv',img,l); 
+        name_dispy = sprintf('Train_Data/Dispy%03d_%03d.csv',img,l); 
         
         %  Write the data 
         dlmwrite(name_ref, Image_Ref, 'delimiter', ',', 'precision', '%.0f');
