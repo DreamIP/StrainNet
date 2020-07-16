@@ -1,14 +1,12 @@
 clc
 clear all
 close all
- 
-%add path to reference frames
-addpath('Reference_speckle_frames'); % change the path if the training dataset is not in the default directory
 
+% create Train_data and Test_data directories
 mkdir Train_Data
 mkdir Test_data
 
-addpath('Reference_speckle_frames'); % change the path if the training dataset is not in the default directory
+addpath('Reference_speckle_frames'); % change the path if the Reference frames are not in the default directory
 addpath('Train_Data');
 addpath('Test_data');
 
