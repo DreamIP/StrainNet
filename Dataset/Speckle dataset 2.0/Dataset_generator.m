@@ -4,7 +4,7 @@ close all
  
 % create Train_data and Test_data directories
 mkdir Train_Data
-mkdir Test_data
+mkdir Test_Data
 
 addpath('Train_References'); % change the path if the Reference frames are not in the default directory
 addpath('Train_Data');
