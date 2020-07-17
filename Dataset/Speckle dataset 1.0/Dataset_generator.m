@@ -4,7 +4,7 @@ close all
 
 % create Train_data and Test_data directories
 mkdir Train_Data
-mkdir Test_data
+mkdir Test_Data
 
 addpath('Train_References'); % change the path if the Reference frames are not in the default directory
 addpath('Train_Data');
@@ -132,10 +132,10 @@ SubsetSize = 256;
         Image_BD = interp2(xxp,yyp,Image_Ref_interpol,x,y,'cubic');
 
         % Data labels
-        name_ref = sprintf('Test_data/Ref%03d_%03d.csv',img,l); 
-        name_def = sprintf('Test_data/Def%03d_%03d.csv',img,l);  
-        name_dispx = sprintf('Test_data/Dispx%03d_%03d.csv',img,l); 
-        name_dispy = sprintf('Test_data/Dispy%03d_%03d.csv',img,l); 
+        name_ref = sprintf('Test_Data/Ref%03d_%03d.csv',img,l); 
+        name_def = sprintf('Test_Data/Def%03d_%03d.csv',img,l);  
+        name_dispx = sprintf('Test_Data/Dispx%03d_%03d.csv',img,l); 
+        name_dispy = sprintf('Test_Data/Dispy%03d_%03d.csv',img,l); 
                 
         %  Write the data 
         dlmwrite(name_ref, Image_Ref, 'delimiter', ',', 'precision', '%.0f');
