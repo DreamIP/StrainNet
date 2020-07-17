@@ -2,7 +2,7 @@
 
 StrainNet estimates subpixelic displacement and strain fields from pairs of reference and deformed images of a flat speckled surface, as Digital Image Correlation (DIC) does. See paper [1] for details. 
 
-If you find this implementation useful, please cite the papers [1]. Also, make sure to adhere to the licensing terms of the authors. 
+If you find this implementation useful, please cite reference [1]. Also, make sure to adhere to the licensing terms of the authors. 
 
 ## Prerequisite
 
@@ -63,8 +63,8 @@ You can use Script_flow.m to visualize the obtained displacements
 
 
 ## References 
-[1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, Accepeted for publication in *Optics and Lasers in Engineering*, Elsevier 2020.  
+[1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, *Optics and Lasers in Engineering*, Elsevier 2020, in press.  
 
 ## Acknowledgments
 
-This code is based on the Pytorch impelmentation of FlowNetS from [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch)
+This code is based on the Pytorch implmentation of FlowNetS from [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch)
