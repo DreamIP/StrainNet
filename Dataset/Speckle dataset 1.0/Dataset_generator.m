@@ -8,7 +8,7 @@ mkdir Test_Data
 
 addpath('Train_References'); % change the path if the Reference frames are not in the default directory
 addpath('Train_Data');
-addpath('Test_data');
+addpath('Test_Data');
 
 %Train dataset 
 n=100;  
