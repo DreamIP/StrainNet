@@ -64,8 +64,11 @@ You can use Script_flow.m to visualize the obtained displacements
 
 ## References 
 [1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, *Optics and Lasers in Engineering*, Volume 136, 2021. 
+
 https://www.sciencedirect.com/science/article/pii/S0143816620306588?via%3Dihub 
+
 https://hal.archives-ouvertes.fr/hal-02933431 
+
 https://arxiv.org/abs/2009.03993
 
 ## Acknowledgments
