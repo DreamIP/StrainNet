@@ -62,7 +62,7 @@ You can use Script_flow.m to visualize the obtained displacements
 |Retrieved by StrainNet-f | ![](Star_frames/Displacements/StrainNet-f.png)|
 
 
-## References 
+## Reference 
 [1] S. Boukhtache, K. Abdelouahab, F. Berry, B. Blaysat, M. Grédiac and F. Sur. *"When Deep Learning Meets Digital Image Correlation"*, *Optics and Lasers in Engineering*, Volume 136, 2021. Available at:
 
 https://www.sciencedirect.com/science/article/pii/S0143816620306588?via%3Dihub 
