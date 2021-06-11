@@ -53,7 +53,8 @@ def main():
     for ext in args.img_exts:
         test_files = data_dir.files('*1.{}'.format(ext))
         for file in test_files:
-            img_pair = file.parent / (file.namebase[:-1] + '2.{}'.format(ext))
+            (without_ext, _) = file.splitext()
+            img_pair = file.parent / (without_ext.basename()[:-1] + '2.{}'.format(ext))
             if img_pair.isfile():
                 img_pairs.append([file, img_pair])
 
@@ -109,8 +110,10 @@ def main():
         disp_y = output_to_write[0,1,:,:]
         disp_y = - disp_y * args.div_flow + 1
         
-        filenamex = save_path/'{}{}'.format(img1_file.namebase[:-1], '_disp_x')
-        filenamey = save_path/'{}{}'.format(img1_file.namebase[:-1], '_disp_y')        
+        (without_ext, _) = img1_file.splitext()
+
+        filenamex = save_path/'{}{}'.format(without_ext.basename()[:-1], '_disp_x')
+        filenamey = save_path/'{}{}'.format(without_ext.basename()[:-1], '_disp_y')        
         np.savetxt(filenamex + '.csv', disp_x,delimiter=',')
         np.savetxt(filenamey + '.csv', disp_y,delimiter=',')
         
