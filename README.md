@@ -36,12 +36,13 @@ The images pairs should be in the same location, with the name pattern *1.ext  *
 
 ```bash
 python inference.py /path/to/input/images/  --arch StrainNet_h  --pretrained /path/to/pretrained/model
-python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model  
+python inference.py /path/to/input/images/  --arch StrainNet_f  --pretrained /path/to/pretrained/model
+python inference.py /path/to/input/images/  --arch StrainNet_l  --pretrained /path/to/pretrained/model  
 ```
 
 ## Pretrained Models
 
-The pretrained models of StrainNet-h and StrainNet_f are available [here](https://drive.google.com/drive/folders/1eh2h6ysikk87L_uad8NNt4FpEq7BSN9M?usp=sharing) 
+The pretrained models of StrainNet-h, StrainNet_f and StrainNet_l are available [here](https://drive.google.com/drive/folders/1eh2h6ysikk87L_uad8NNt4FpEq7BSN9M?usp=sharing) 
 
 ## Results of star images
 
@@ -50,6 +51,7 @@ Execute the following commands in the StrainNet directory (please also copy here
 ```bash
 python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_h  --pretrained StrainNet-h.pth.tar
 python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_f  --pretrained StrainNet-f.pth.tar
+python inference.py ../Star_frames/Noiseless_frames/  --arch StrainNet_l  --pretrained StrainNet-l.pth.tar
 ```
 The output of inference.py can be found in Star_frames/Noiseless_frames/flow/
 
