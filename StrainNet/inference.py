@@ -16,10 +16,10 @@ model_names = sorted(name for name in models.__dict__
 
 parser = argparse.ArgumentParser(description='StrainNet inference',
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--arch', default='StrainNet_f',choices=['StrainNet_f','StrainNet_h'],
+parser.add_argument('--arch', default='StrainNet_l',choices=['StrainNet_f','StrainNet_h','StrainNet_l'],
                     help='network f or h')                                  
 parser.add_argument('data', metavar='DIR',
-                    help='path to images folder, image names must match \'[name]0.[ext]\' and \'[name]1.[ext]\'')
+                    help='path to images folder, image names must match \'[name]1.[ext]\' and \'[name]2.[ext]\'')
 parser.add_argument('--pretrained', metavar='PTH', help='path to pre-trained model')
 parser.add_argument('--output', '-o', metavar='DIR', default=None,
                     help='path to output folder. If not set, will be created in data folder')
@@ -53,8 +53,7 @@ def main():
     for ext in args.img_exts:
         test_files = data_dir.files('*1.{}'.format(ext))
         for file in test_files:
-            (without_ext, _) = file.splitext()
-            img_pair = file.parent / (without_ext.basename()[:-1] + '2.{}'.format(ext))
+            img_pair = file.parent / (file.stem[:-1] + '2.{}'.format(ext))
             if img_pair.isfile():
                 img_pairs.append([file, img_pair])
 
@@ -67,13 +66,19 @@ def main():
     model.eval()
     cudnn.benchmark = True
 
+
     for (img1_file, img2_file) in tqdm(img_pairs):
-    
+
         img1 =  np.array(imread(img1_file))
         img2 =  np.array(imread(img2_file))
+        
+        if args.arch == 'StrainNet_l' and img1.ndim == 3: 
+            img1 = img1[:,:,1]
+            img2 = img2[:,:,1]
+        
         img1 = img1/255
         img2 = img2/255
-        		
+            
         if img1.ndim == 2:         
             img1 = img1[np.newaxis, ...]       
             img2 = img2[np.newaxis, ...]
@@ -83,10 +88,10 @@ def main():
             
             img1 = torch.from_numpy(img1).float()
             img2 = torch.from_numpy(img2).float()       
-        
-            in_ref = torch.cat([img1,img1,img1],1)
-            in_def = torch.cat([img2,img2,img2],1)
-            input_var = torch.cat([in_ref,in_def],1)           
+            if args.arch == 'StrainNet_h' or args.arch == 'StrainNet_f':
+                img1 = torch.cat([img1,img1,img1],1)
+                img2 = torch.cat([img2,img2,img2],1)
+            input_var = torch.cat([img1,img2],1)           
 
         elif img1.ndim == 3:
             img1 = np.transpose(img1, (2, 0, 1))
@@ -96,27 +101,25 @@ def main():
             img2 = torch.from_numpy(img2).float()       
             input_var = torch.cat([img1, img2]).unsqueeze(0)          
         
-        # compute output
+        # compute output   
         input_var = input_var.to(device)
         output = model(input_var)
-        if args.arch == 'StrainNet_h':
-            output = output = torch.nn.functional.interpolate(input=output, scale_factor=2, mode='bilinear')
- 
-        
+        if args.arch == 'StrainNet_h' or args.arch == 'StrainNet_l':
+            output = torch.nn.functional.interpolate(input=output, scale_factor=2, mode='bilinear')
+
         output_to_write = output.data.cpu()
         output_to_write = output_to_write.numpy()       
         disp_x = output_to_write[0,0,:,:]
         disp_x = - disp_x * args.div_flow + 1        
         disp_y = output_to_write[0,1,:,:]
         disp_y = - disp_y * args.div_flow + 1
-        
-        (without_ext, _) = img1_file.splitext()
 
-        filenamex = save_path/'{}{}'.format(without_ext.basename()[:-1], '_disp_x')
-        filenamey = save_path/'{}{}'.format(without_ext.basename()[:-1], '_disp_y')        
+        filenamex = save_path/'{}{}'.format(img1_file.stem[:-1], '_disp_x')
+        filenamey = save_path/'{}{}'.format(img1_file.stem[:-1], '_disp_y')        
         np.savetxt(filenamex + '.csv', disp_x,delimiter=',')
         np.savetxt(filenamey + '.csv', disp_y,delimiter=',')
         
+   
 if __name__ == '__main__':
     main()
 
